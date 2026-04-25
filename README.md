@@ -52,9 +52,9 @@ The lab uses **three VirtualBox VMs** connected via internal networks. The route
 
 Assigned to internal network **intnet1**, mapped to interface `enp0s3`. A NetworkManager connection profile was created with a static IP address and default gateway pointing to the router's G0/0 interface.
 
-![Deep's Machine - NIC Config](images/image2.jpg)
+![Deep's Machine - NIC Config](image2.jpg)
 
-![Deep's Machine - IP Configuration](images/image3.jpg)
+![Deep's Machine - IP Configuration](image3.jpg)
 
 ---
 
@@ -62,9 +62,9 @@ Assigned to internal network **intnet1**, mapped to interface `enp0s3`. A Networ
 
 Assigned to internal network **intnet2**, mapped to interface `enp0s3`. Configured identically to Deep's machine but on the second subnet — default gateway points to the router's G0/1 interface.
 
-![Mohan's Machine - NIC Config](images/image4.jpg)
+![Mohan's Machine - NIC Config](image4.jpg)
 
-![Mohan's Machine - IP Configuration](images/image5.jpg)
+![Mohan's Machine - IP Configuration](image5.jpg)
 
 ---
 
@@ -72,15 +72,15 @@ Assigned to internal network **intnet2**, mapped to interface `enp0s3`. Configur
 
 The router VM has **two NICs** — one connected to each internal network. Two separate NetworkManager profiles were created, one for each interface (`enp0s3` and `enp0s8`).
 
-![Router - NIC Setup](images/image6.png)
+![Router - NIC Setup](image6.png)
 
 Separate network profiles were configured for both interfaces with static IPs on each subnet:
 
-![Router - Network Profiles](images/image7.png)
+![Router - Network Profiles](image7.png)
 
 After bringing both connections up, IP forwarding was enabled so the router actually routes packets rather than dropping them:
 
-![Router - Bring Up Connections](images/image8.png)
+![Router - Bring Up Connections](image8.png)
 
 IP forwarding is the key that turns this Linux VM into a router. The `sysctl` command writes a `1` to `net.ipv4.ip_forward`, allowing packets destined for other networks to be forwarded:
 
@@ -88,7 +88,7 @@ IP forwarding is the key that turns this Linux VM into a router. The `sysctl` co
 sysctl -w net.ipv4.ip_forward=1
 ```
 
-![Router - IP Forwarding](images/image9.png)
+![Router - IP Forwarding](image9.png)
 
 ---
 
@@ -102,7 +102,7 @@ After completing all configuration steps, end-to-end connectivity was verified u
 ping 192.168.2.2
 ```
 
-![Ping from Deep to Mohan](images/image10.jpg)
+![Ping from Deep to Mohan](image10.jpg)
 
 ### 🔍 Ping Test — Mohan → Deep (192.168.1.2)
 
@@ -110,7 +110,7 @@ ping 192.168.2.2
 ping 192.168.1.2
 ```
 
-![Ping from Mohan to Deep](images/image11.jpg)
+![Ping from Mohan to Deep](image11.jpg)
 
 > ✅ Both directions successful. Zero packet loss. Full inter-network communication confirmed.
 
