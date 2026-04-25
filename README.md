@@ -148,7 +148,7 @@ Step 6 → VM2 sends ICMP Echo Reply → follows the reverse path back to VM1
 
 | | |
 |--|--|
-| **Deep** | [GitHub Profile](https://github.com/) |
+| **Deep** | [LinkedIn](https://www.linkedin.com/in/deepthi-karnatakapu/) |
 | **Mohan Raj** | [LinkedIn](https://www.linkedin.com/in/amraj1231/) |
 
 ---
