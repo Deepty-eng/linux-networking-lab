@@ -42,7 +42,7 @@ The lab uses **three VirtualBox VMs** connected via internal networks. The route
   192.168.1.0/24                                             192.168.2.0/24
 ```
 
-![Lab Topology Diagram](images/image1.jpg)
+![Lab Topology Diagram](image1.jpg)
 
 ---
 
