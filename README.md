@@ -153,4 +153,4 @@ Step 6 → VM2 sends ICMP Echo Reply → follows the reverse path back to VM1
 
 ---
 
-> *This is the same concept behind cloud VPCs, enterprise networks, and every router you've ever used — just distilled into three VMs on a laptop.* 🚀
+
