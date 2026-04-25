@@ -85,7 +85,7 @@ After bringing both connections up, IP forwarding was enabled so the router actu
 IP forwarding is the key that turns this Linux VM into a router. The `sysctl` command writes a `1` to `net.ipv4.ip_forward`, allowing packets destined for other networks to be forwarded:
 
 ```bash
-sysctl -w net.ipv4.ip_forward=1
+echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 ```
 
 ![Router - IP Forwarding](image9.png)
